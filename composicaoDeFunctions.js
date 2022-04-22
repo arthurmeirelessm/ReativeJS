@@ -48,7 +48,7 @@ console.log(approveds)
 
 
 
-function fn5() {
+/*function fn5() {
     fn3() 
  } 
 
@@ -59,7 +59,6 @@ function fn4() {
 function fn3() {
     setTimeout(() => console.log('timeout'), 7000) 
     console.log("DVERFGBRERBR")
-    fn4()
     
 } 
 function fn2() {
@@ -74,4 +73,21 @@ function main() {
 }
 
 main()
-console.log('Fim!')
+console.log('Fim!')*/
+
+
+/*function esperarPor(tempo) {
+    const futuro = Date.now() + tempo
+    while(Date.now() < futuro) {}
+}
+
+
+setInterval(() => console.log('Exec #01'), 3000)
+
+setTimeout(() => {
+    esperarPor(5000)
+    console.log('Exec #02')
+}, 300)
+
+esperarPor(5000)
+console.log('Fim!')*/
