@@ -1,29 +1,77 @@
-/*const notas = [5.7, 7.6, 6.7, 5.7, 7.0, 7.8, 9.0 ]
+/*const notes = [5.7, 7.6, 6.7, 5.7, 7.0, 7.8, 9.0 ]
 
 
 const somar = (a, b) => a + b
 const dividir = (a, b) => a / b
 
 
-const media = dividir(notas.reduce(somar), notas.length)
+const media = dividir(notes.reduce(somar), notes.length)
 
 console.log(media)*/
 
-
-const alunos = [
-    {nome: 'Ana', nota: 8.0,},
-    {nome: 'Arthur', nota: 5.0},
-    {nome: 'Caio', nota: 6.0},
+//Imperative Method
+/*const students = [
+    {name: 'Ana', note: 5.0,},
+    {name: 'Arthur', note: 9.0},
+    {name: 'Caio', note: 6.0},
 ]
 
-function run(alunos) {
-    const aprovados = []
-    console.log(alunos.length)
-    for (let i = 0; i < alunos.length; i++) {
-        if (alunos[i].nota <= 7)
-        return aprovados.push(alunos[i])
+function run(students) {
+    const approved = []
+    for (let i = 0; i < students.length; i++) {
+        if (alunos[i].note >= 7.0) {
+            approved.push(alunos[i])
+        }
     }
-    return 'Nenhum aluno aprovado'
+    return 'No student approved'
+}
+console.log(run(students))*/
+
+
+
+//Declarative method
+
+/*const students =   [
+    {name: 'Ana', note: 5.0,},
+    {name: 'Arthur', note: 9.0},
+    {name: 'Caio', note: 6.0},
+]
+
+const isApproved = students => students.note >= 7
+
+const approveds = students.filter(isApproved)
+
+console.log(approveds)  
+
+*/
+
+
+
+
+function fn5() {
+    fn3() 
+ } 
+
+function fn4() {
+    fn5() 
+ } 
+
+function fn3() {
+    setTimeout(() => console.log('timeout'), 7000) 
+    console.log("DVERFGBRERBR")
+    fn4()
+    
+} 
+function fn2() {
+   fn3() 
+} 
+function fn1() {
+    fn2()
+} 
+
+function main() {
+   fn1()
 }
 
-console.log(run(alunos))
+main()
+console.log('Fim!')
