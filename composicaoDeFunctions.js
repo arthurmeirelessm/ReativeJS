@@ -46,8 +46,6 @@ console.log(approveds)
 */
 
 
-
-
 /*function fn5() {
     fn3() 
  } 
