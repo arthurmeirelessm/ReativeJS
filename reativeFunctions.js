@@ -82,7 +82,7 @@ const fin = () => nu1 == 2 ? console.log('oioioi') : console.log('svfvdefvd')
 fin(nu1)*/
 
  
-const add = (array) => {
+/*const add = (array) => {
     let total = 0
     for(let n of array) {
     total += n
@@ -92,4 +92,4 @@ const add = (array) => {
 
 const arr = [3, 6, 6 ,7 ,7, 2]
 
-console.log(add(arr))
+console.log(add(arr))*/
