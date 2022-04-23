@@ -1,4 +1,4 @@
-/*const notes = [5.7, 7.6, 6.7, 5.7, 7.0, 7.8, 9.0 ]
+const notes = [5.7, 7.6, 6.7, 5.7, 7.0, 7.8, 9.0 ]
 
 
 const somar = (a, b) => a + b
@@ -7,10 +7,10 @@ const dividir = (a, b) => a / b
 
 const media = dividir(notes.reduce(somar), notes.length)
 
-console.log(media)*/
+console.log(media)
 
 //Imperative Method
-/*const students = [
+const students = [
     {name: 'Ana', note: 5.0,},
     {name: 'Arthur', note: 9.0},
     {name: 'Caio', note: 6.0},
@@ -25,13 +25,12 @@ function run(students) {
     }
     return 'No student approved'
 }
-console.log(run(students))*/
+console.log(run(students))
 
 
 
 //Declarative method
-
-/*const students =   [
+const studentsDeclarative =  [
     {name: 'Ana', note: 5.0,},
     {name: 'Arthur', note: 9.0},
     {name: 'Caio', note: 6.0},
@@ -39,14 +38,12 @@ console.log(run(students))*/
 
 const isApproved = students => students.note >= 7
 
-const approveds = students.filter(isApproved)
+const approveds = studentsDeclarative.filter(isApproved)
 
 console.log(approveds)  
 
-*/
 
-
-/*function fn5() {
+function fn5() {
     fn3() 
  } 
 
@@ -71,10 +68,10 @@ function main() {
 }
 
 main()
-console.log('Fim!')*/
+console.log('Fim!')
 
 
-/*function esperarPor(tempo) {
+function esperarPor(tempo) {
     const futuro = Date.now() + tempo
     while(Date.now() < futuro) {}
 }
@@ -88,4 +85,4 @@ setTimeout(() => {
 }, 300)
 
 esperarPor(5000)
-console.log('Fim!')*/
+console.log('Fim!')
