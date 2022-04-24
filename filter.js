@@ -1,10 +1,10 @@
-/*const nums = [5, 5, 5 ,7, 7, 9, 3, 56, 67, 87, 23]
+const nums = [5, 5, 5 ,7, 7, 9, 3, 56, 67, 87, 23]
 
 
 const filt = item => item >= 7
 
 
-console.log(nums.filter(filt))*/
+console.log(nums.filter(filt))
 
 
 const cart = [
@@ -17,10 +17,23 @@ const cart = [
  
 ]
 
-const getName = elem => elem.nome
+const getName = elem => elem.name
 const quantityGreaterThanZero = elem => elem.qtd < 10
 const nameForItens = cart.filter(quantityGreaterThanZero).map(getName)
 
 
-console.log(nameForItens)
+//console.log(nameForItens)
  
+
+Array.prototype.myFilter = function (fn) {
+    const newArray = []
+    for(let i = 0; i < this.length; i++) {
+        if (fn(this[i], i, this)) {
+            newArray.push(this[i])
+        }
+    }
+    return newArray
+} 
+const nameForItens2 = cart.myFilter(quantityGreaterThanZero).map(getName)
+
+console.log(nameForItens2)
