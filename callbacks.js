@@ -17,7 +17,6 @@ const path = require('path')
 
 const caminho = path.join(__dirname, 'dadosCallbacks.txt')
 
-console.log(caminho)
 function exibirConteudo(err, conteudo) {
    console.log(conteudo.toString())
 }
