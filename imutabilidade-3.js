@@ -18,14 +18,14 @@ const pessoa = {
 
 
 //PASSAGEM POR REFERENCIA
-/*function alteraPessoa (novaPessoa) {
+function alteraPessoa (novaPessoa) {
     novaPessoa.nome = 'Lindoval'
     novaPessoa.cidade = 'Vitória'
     
 }
 
 
-console.log(alteraPessoa(pessoa))*/
+console.log(alteraPessoa(pessoa))
 
 
 

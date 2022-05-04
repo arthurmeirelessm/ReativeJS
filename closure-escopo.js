@@ -6,5 +6,4 @@ function somarXMais3() {
 }
 
 
-
 module.export = somarXMais3

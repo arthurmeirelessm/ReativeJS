@@ -19,6 +19,7 @@ console.log(areaCirc(10))
 
 
 
+//ESSA É PURA, USA PARAMETROS PARA DENTRO DA FUNÇÃO, TORNANDO-A UMA INFLUENCIA INTERNA
 function areaCirc2(raio, pi) {
 
     return raio * raio * pi
