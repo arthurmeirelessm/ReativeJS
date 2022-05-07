@@ -4,7 +4,11 @@ const readLine = require('readline')
 
 
 
+
+//
+
 function obterResposta(pergunta) {
+    // VARIAVEL rl PUXA UM METODO(CREATEINTERFACE) QUE FORMA UM INPUT/PERGUNTA E UM OUTPUT/RESPOSTA
     const rl = readLine.createInterface({
         input: process.stdin,
         output: stdout,
@@ -20,25 +24,28 @@ function obterResposta(pergunta) {
 
 
 
-function namorada () {
+function namorada() {
     console.log('N: Apagar as luzes pessoal...')
     console.log("N: Silêcio...")
-    setTimeout(() => {
     console.log("N: SURPRESA!!!!")
-    }, 5000) 
 }
 
 
 
-function sindico ( ) {
-    setTimeout(() => {
-        console.log('S: Monitorando o baralho')
-    }, 2000)
+function sindico() {
+    console.log('S: Monitorando o baralho')
 }
 
 
-function porteiro (interessados) {
-    interessados.forEach(obs => obs());
+async function porteiro(interessados) {
+    while (true) {
+        const resp = await obterResposta('O namorado chegou?')
+        if (resp.toLowerCase() === 'sim') {
+            (interessados || []).forEach(obs => obs());
+        } else if (resp.toLowerCase() === 'q') {
+            break
+        }
+    }
 }
 
 

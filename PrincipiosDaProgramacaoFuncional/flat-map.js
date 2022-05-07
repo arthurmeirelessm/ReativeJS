@@ -20,6 +20,12 @@ const letras2 = [
 ]
 
 
+const resultado2 = letras2
+    .map(el => el.toUpperCase())
+        .reduce((a, b) => a + b)
+
+
+
 
 const letrasAninhadas = letras2.flat(Infinity)
 console.log(letrasAninhadas)
