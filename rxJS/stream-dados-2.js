@@ -1,27 +1,41 @@
-function gerarNumeros() {
+
+function gerarElementos(array) {
     return {
         iniciar(fn) {
-            let num = 0
-            setInterval(() => {
-                fn(num++)
-            }, 2000)
+            let indice = 0
+            const i = setInterval(() => {
+                if (indice >= array.length) {
+                    console.log("Vou parar por aqui!")
+                    clearInterval(i)
+                } else {
+                    fn(array[indice])
+                    indice++
+                }
+            }, 1000)
+            return {
+                parar() {
+                    clearInterval(i)
+                }
+            }
         }
     }
 }
 
+//const numeros = [1, 3, 5, 4, 3, 5, 4, 8, 8, 5, 5, 5, 2, 9,]
+//const temp1 = gerarElementos(numeros)
+
+//const exec1 = temp1.iniciar(num => {
+    //console.log(Math.pow(2, num))
+//})
 
 
 
-
-const resp1 = gerarNumeros() 
-resp1.iniciar(numeros => {
-    console.log(`#1: ${numeros * 2}`)
-})
+//setTimeout(() => {
+    ///exec1.parar()
+//}, 3000)
 
 
+const nomes = ['Ana', 'Alon', 'Dylan']
 
 
-resp2 = gerarNumeros()
-resp2.iniciar(a => {
-    console.log(`#2: ${a + 100}`)
-})
+gerarElementos(nomes).iniciar(console.log)
