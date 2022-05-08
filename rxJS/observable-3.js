@@ -7,7 +7,7 @@ function entre(min, max) {
         for (let i = min; min <= max; i++) {
             subscriber.next(i)
         }
-
+       // O Complete finaliza o Observable
         subscriber.complete()
     })
 }
