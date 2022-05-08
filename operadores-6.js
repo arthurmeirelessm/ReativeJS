@@ -1,17 +1,25 @@
 const { from, Observable, observable, pipe } = require('rxjs')
 
 
-function primeiro() {
+
+
+function createPipeableOperator(nextFn) {
     return function (source) {
         return new Observable(subscriber => {
             source.subscribe({
                 next(v) {
-                    subscriber.next(1)
-                    subscriber.complete()
+                   nextFn(subscriber, v)
                 }
             })
         })
     }
+}
+
+function primeiro() {
+    return createPipeableOperator(subscriber => {
+      subscriber.next(v)
+      subscriber.complete()
+    })
 }
 
 
@@ -52,6 +60,7 @@ function nenhum() {
 
 
 from([2, 5, 3, 4, 6, 5, 6])
-    .pipe(nenhum()).pipe(ultimo())
-    
+    //.pipe(nenhum())
+    .pipe(primeiro())
+
     .subscribe(console.log)
