@@ -93,3 +93,13 @@ const AND = a => b => a(b)(FALSO)
 o = AND(VERDADEIRO)(VERDADEIRO)
 
 o
+
+
+
+//OR
+
+const OR = a => b => a(VERDADEIRO)(FALSO)
+
+o = OR(ULT)(PRI)
+
+o
