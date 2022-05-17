@@ -44,3 +44,41 @@ const TROCA =  f => a => b => f(b)(a)
 c = TROCA(ULT)(45)(68)
 
 c
+
+
+const T = true
+const F = false
+
+
+
+
+const valdation = F ? "TRUE" : "FALSE"
+
+
+
+valdation
+
+// ------------------------------------------------------------------------
+
+const VERDADEIRO = PRI
+const FALSO = ULT
+
+
+VERDADEIRO.inspect = () => "Verdadeiro (PRI)"
+FALSO.inspect = () => "False (ULT)"
+
+
+VERDADEIRO
+FALSO
+
+
+
+
+
+
+console.log(PRI)
+const NOT = a => PRI(a)(FALSO)
+
+o = NOT(VERDADEIRO)
+
+o
