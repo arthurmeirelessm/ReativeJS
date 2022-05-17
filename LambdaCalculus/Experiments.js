@@ -1,28 +1,46 @@
-function run(input) {
-    //cleanedInput remove todos os símbolos especiais, acentos e ao final converte para minúsculo o valor de input 
-    const cleanedInput = input.normalize("NFD").replace(/[^\w\s]/gi, '').toLowerCase();
-    const optionsRegex = {
-        "regex 1": "titulo 1",
-        "regex 2": "titulo 2",
-        "regex 3": "titulo 3"
-    };
+let r
 
-    let data = null;
-    for (let key in optionsRegex) {
-        if (optionsRegex.hasOwnProperty(key)) {
-            const matching = new RegExp(key, "i");
+const I = (a, b) => b * a - a
 
-            if (matching.test(cleanedInput)) {
-                data = optionsRegex[key];
-            }
-        }
-    }
+r = I(3, 9)
 
-    if (data == null) {
-        return 'input inesperado';
-    }
-    return data;
-}
+r
+
+// ---------------------------------------------------------
+
+let c
+
+const O = (a) => a
+
+r = O(3)
+
+r
 
 
-console.log('ti')
+r = O(O) 
+r
+
+
+const PRI = a => b => a
+
+
+
+r = PRI(7)(11)
+
+r
+
+
+const ULT = a => b => b
+
+
+c = ULT(23)(78)
+
+
+c
+
+
+const TROCA =  f => a => b => f(b)(a)
+
+c = TROCA(ULT)(45)(68)
+
+c
