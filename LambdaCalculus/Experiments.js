@@ -74,11 +74,22 @@ FALSO
 
 
 
-
+//NO
 
 console.log(PRI)
 const NOT = a => PRI(a)(FALSO)
 
-o = NOT(VERDADEIRO)
+o = NOT(FALSO)
+
+o
+
+
+//AND
+
+
+
+const AND = a => b => a(b)(FALSO)
+
+o = AND(VERDADEIRO)(VERDADEIRO)
 
 o
